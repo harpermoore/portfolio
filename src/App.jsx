@@ -1,4 +1,5 @@
 import ProjectSection from "./components/projectSection"
+import HorizontalLine from "./components/HorizontalLine"
 
 
 const projects = [
@@ -12,7 +13,7 @@ const projects = [
   }, 
   {
     title: "Besmoke Scientific",
-    description: "Developed an inventory management system powered by ASP.NET and React and implemented CRUD operaitons."
+    description: "Developed an inventory management system powered by ASP.NET and React and implemented CRUD operaitons with EF Core."
   }
 ]
 
@@ -34,8 +35,11 @@ function App() {
       </div>
     </div>
 
-    <div style={{border: 'solid', width: 840, borderWidth: 1, color: "#cecece"}} className="mt-6"></div> 
-    
+
+    <HorizontalLine/>
+    <div className="flex flex-col justify-center items-start mt-6">
+    <p className="text-2xl font-bold tracking-wide underline decoration-pink-500/30 decoration-4 ">Selected Projects</p>
+
     {projects.map((project)=>{
       return (<ProjectSection 
       title={project.title}
@@ -45,7 +49,16 @@ function App() {
     })}
 
     </div>
+
+
+
+
+
+    
+    </div>
   
+
+     <p className="fixed bottom-0 w-full text-center">©{new Date().getFullYear()} Created by Harper Moore</p>
     </>
   )
 }
