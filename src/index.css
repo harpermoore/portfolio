@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 *{
-  font-family: "Inter Tight";
+  font-family:monospace;
 }
 
 @layer base {
